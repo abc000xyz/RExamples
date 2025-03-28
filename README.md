@@ -4,8 +4,6 @@
 Examples of generating random samples from various probability distributions:
 
 ```R
-set.seed(42)  # For reproducibility
-
 # Normal distribution (mean = 0, sd = 1)
 normal_samples <- rnorm(20, mean = 0, sd = 1)
 
