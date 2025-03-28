@@ -120,7 +120,7 @@ prod(egn_vals)
 ```
 
 ## Data Frame Creation and Analysis
-Create a data frame 'people' with personal information and perform basic operations:
+Create a data frame 'employees' with personal information and perform basic operations:
 
 ```R
 employees <- data.frame(
