@@ -1,4 +1,4 @@
-```markdown
+markdown
 # R Examples
 
 ## Airquality Dataset Analysis
@@ -88,12 +88,3 @@ ggplot(filtered_data, aes(x = manufacturer, y = displ, fill = manufacturer)) +
        y = "Displacement in Liters") +
   theme_minimal()
 ```
-```
-
-This Markdown version:
-- Uses proper headings and subheadings
-- Organizes content into logical sections
-- Formats R code blocks with ```R
-- Uses bullet points for numbered tasks
-- Maintains all original code and instructions
-- Improves readability with consistent spacing and formatting
