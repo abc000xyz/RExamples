@@ -12,7 +12,7 @@ normal_samples <- rnorm(20, mean = 0, sd = 1)
 # Uniform distribution (between 0 and 1)
 uniform_samples <- runif(20, min = 0, max = 1)
 
-# Exponential distribution (rate = 0.5, mean = 2)
+# Exponential distribution (rate = 0.5) inverse of mean
 exp_samples <- rexp(20, rate = 0.5)
 
 # Poisson distribution (lambda = 4)
