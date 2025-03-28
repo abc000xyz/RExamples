@@ -1,4 +1,3 @@
-markdown
 # R Examples
 
 ## Airquality Dataset Analysis
