@@ -107,3 +107,66 @@ ggplot(filtered_data, aes(x = manufacturer, y = displ, fill = manufacturer)) +
        y = "Displacement in Liters") +
   theme_minimal()
 ```
+
+## Matrix Operations
+
+```R
+x = c(-0.94, -0.97, 0.74, -0.27, 1.25, 0.42, 0.66, -0.68, -0.63)
+y = c(0.40, 0.02, 2.63, -0.01, 0.72, 1.93, -0.94, -0.31, -0.30)
+A = matrix(x, nrow = 3)
+B = matrix(y, nrow = 3)
+A + B
+A %*% B
+det(A)
+invA = solve(A)
+det(A %*% B)
+egn.prod = eigen(A %*% B)
+egn.values = egn.prod$values
+egn.vec = egn.prod$vectors
+sum(egn.values)
+prod(egn.values)
+```
+
+## Data Frame Creation and Analysis
+
+```R
+df <- data.frame(
+  id = 1:10,
+  name = c("Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace",
+          "Hank", "Ivy", "Jack"),
+  age = c(25, 30, 22, 35, 28, 26, 27, 29, 31, 33),
+  gender = c("F", "M", "M", "M", "F", "M", "F", "M", "F", "M"),
+  salary = c(45000, 60000, 35000, 75000, 50000, 40000, 55000, 65000, 70000, 80000)
+)
+head(df, 6)
+df$age_sum <- df$age + df$salary
+summary(df)
+```
+
+## Probability Distributions
+
+```R
+mu_m <- 180.3
+var_m <- 10
+mu_f <- 167.2
+var_f <- 15
+p_m_gt_200 <- 1 - pnorm(200, mean = mu_m, sd = sqrt(var_m))
+p_m_lt_165 <- pnorm(165, mean = mu_m, sd = sqrt(var_m))
+p_f_between_166_168 <- pnorm(168, mean = mu_f, sd = sqrt(var_f)) - 
+                       pnorm(166, mean = mu_f, sd = sqrt(var_f))
+if ((p_m_gt_200 + p_m_lt_165) > p_f_between_166_168) {
+  cat("It is more likely to meet a man who is bigger than 200 cm or lesser than 165 cm.\n")
+} else {
+  cat("It is more likely to meet a woman who is between 166 and 168 cm.\n")
+}
+```
+
+## Sequence and Plotting
+
+```R
+p <- seq(from = 0.001, to = 0.999, length.out = 1000)
+log_p <- log(p)
+df <- data.frame(p = p, log_p = log_p)
+plot(df$p, df$log_p, type = "l", col = "blue", xlab = "p", ylab = "log(p)")
+title(main = "Graph of p.log(p) for 0 < p ≤ 1")
+```
