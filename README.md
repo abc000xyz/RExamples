@@ -39,7 +39,7 @@ Obtain a set of random samples of size 20 from an exponential distribution with 
 
 ```R
 set.seed(42)
-exp_sample <- rexp(20, rate = 0.5)
+exp_sample <- rexp(20, rate = 0.5) #mean is inverse of rate
 N <- matrix(exp_sample, nrow = 4)
 N1 <- t(N)
 N1 %*% N
