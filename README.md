@@ -1,5 +1,27 @@
 # R Examples
 
+## Random Distributions
+Examples of generating random samples from various probability distributions:
+
+```R
+set.seed(42)  # For reproducibility
+
+# Normal distribution (mean = 0, sd = 1)
+normal_samples <- rnorm(20, mean = 0, sd = 1)
+
+# Uniform distribution (between 0 and 1)
+uniform_samples <- runif(20, min = 0, max = 1)
+
+# Exponential distribution (rate = 0.5, mean = 2)
+exp_samples <- rexp(20, rate = 0.5)
+
+# Poisson distribution (lambda = 4)
+poisson_samples <- rpois(20, lambda = 4)
+
+# Binomial distribution (n = 10 trials, p = 0.5)
+binomial_samples <- rbinom(20, size = 10, prob = 0.5)
+```
+
 ## Airquality Dataset Analysis
 Work with the ‘airquality’ dataset. Construct a dataframe using the variables ‘Ozone’, ‘Wind’, and ‘Temp’. Then, generate a correlation plot for these variables using the GGally package. Provide an interpretation of the correlation plot.
 
