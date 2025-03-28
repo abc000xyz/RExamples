@@ -123,17 +123,16 @@ prod(egn_vals)
 Create a data frame 'people' with personal information and perform basic operations:
 
 ```R
-people <- data.frame(
-  id = 1:10,
-  name = c("Alice", "Bob", "Charlie", "David", "Emma", "Frank", "Grace",
-          "Hank", "Ivy", "Jack"),
-  age = c(25, 30, 22, 35, 28, 26, 27, 29, 31, 33),
-  gender = c("F", "M", "M", "M", "F", "M", "F", "M", "F", "M"),
-  salary = c(45000, 60000, 35000, 75000, 50000, 40000, 55000, 65000, 70000, 80000)
+employees <- data.frame(
+  emp_id = 101:110,
+  full_name = c("Sarah", "Mike", "Tom", "Lisa", "Kelly", "James", "Rachel", 
+                "Peter", "Nina", "Alex"),
+  years = c(23, 27, 31, 29, 24, 33, 26, 28, 30, 32),
+  sex = c("F", "M", "M", "F", "F", "M", "F", "M", "F", "M"),
 )
-head(people, 6)
-people$age_salary_sum <- people$age + people$salary
-summary(people)
+head(employees, 5)
+employees$years_income_total <- employees$years + employees$income
+summary(employees)
 ```
 
 ## Probability Distributions
